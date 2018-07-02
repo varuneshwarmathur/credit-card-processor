@@ -27,7 +27,6 @@ public class CreditCardProcessorDAOImpl implements CreditCardProcessorDAO {
 
 
     public List<Map<String, Object>> getAllCards() throws DataAccessException {
-        //return jdbcTemplate.queryForList("SELECT * FROM CARDINFO");
         return jdbcTemplate.queryForList("SELECT * FROM creditcardinfo");
     }
 
