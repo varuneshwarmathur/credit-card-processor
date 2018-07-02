@@ -55,3 +55,6 @@ localhost:8080/ccp/v1/v2/api-docs
 ![alt text](https://raw.githubusercontent.com/varuneshwarmathur/credit-card-processor/master/swagger.png)
 
 
+### Test Cases
+
+[embed]https://github.com/varuneshwarmathur/credit-card-processor/blob/master/Surefire%20Report_CPP.pdf[/embed]
