@@ -36,10 +36,6 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
         <dependency>
@@ -82,22 +78,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>au.com.dius</groupId>
-            <artifactId>pact-jvm-consumer-junit_2.12</artifactId>
-            <version>3.5.19</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>au.com.dius</groupId>
-            <artifactId>pact-jvm-consumer_2.12</artifactId>
-            <version>3.5.19</version>
-        </dependency>
-        <dependency>
-            <groupId>au.com.dius</groupId>
-            <artifactId>pact-jvm-provider_2.12</artifactId>
-            <version>3.5.19</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
