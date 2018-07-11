@@ -90,7 +90,7 @@ public class CreditCardDataController {
         return ccGenericResponse;
     }
 
-    @RequestMapping(path = "/list-cards", method = RequestMethod.GET)
+    @RequestMapping(path = "/list-cards", method = RequestMethod.GET , produces = "application/json")
     @ApiOperation("List all cards from the system")
     public CreditCardListResponse getCards() {
         return processorService.getAllCards();
