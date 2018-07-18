@@ -1,6 +1,7 @@
 package com.vnm.creditcardprocessor.utils;
 
 import com.atlassian.oai.validator.restassured.SwaggerValidationFilter;
+import static io.restassured.RestAssured.given;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -42,7 +43,7 @@ public class CCPContractAPIValidation {
      * Direct API can be accessed on a Sandbox to do a realtime validation with the contract.
      */
     @Test
-    public void testGetValidPet() {
+    public void testGetValidContract() {
         given()
 
                 .filter(validationFilter)
