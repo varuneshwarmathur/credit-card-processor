@@ -1,12 +1,11 @@
 /**
  *
  */
-package com.vnm.creditcardprocessor.model;
+package com.adidas.subscription.model;
 /**
  * @author  varmathu0
- * @project Credit-Card-Processor
  */
-public class CCError {
+public class SubscriptionServiceError {
 
     private String message;
 
