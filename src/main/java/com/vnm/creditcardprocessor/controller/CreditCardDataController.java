@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestHeader;
 import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
 /**
  * @author  varmathu0
  * @project Credit-Card-Processor
@@ -25,6 +26,9 @@ public class CreditCardDataController {
 
     @Autowired
     private CCProcessorService processorService;
+    @Autowired
+    private HttpServletRequest request;
+    
 
     @RequestMapping(path = "/add-card", method = RequestMethod.POST)
     @ApiOperation("Add a new credit card")
@@ -96,6 +100,8 @@ public class CreditCardDataController {
     @ApiOperation("List all cards from the system")
     public CreditCardListResponse getCards(@RequestHeader Map<String, String> headers) {
         System.out.println(headers);
+        String ipAddress = request.getRemoteAddr();
+        System.out.println(ipAddress);
         return processorService.getAllCards();
 
     }
