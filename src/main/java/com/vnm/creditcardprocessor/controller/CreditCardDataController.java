@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestHeader;
 /**
  * @author  varmathu0
  * @project Credit-Card-Processor
@@ -92,7 +93,8 @@ public class CreditCardDataController {
 
     @RequestMapping(path = "/list-cards", method = RequestMethod.GET , produces = "application/json")
     @ApiOperation("List all cards from the system")
-    public CreditCardListResponse getCards() {
+    public CreditCardListResponse getCards(@RequestHeader Map<String, String> headers) {
+        System.out.println(headers);
         return processorService.getAllCards();
 
     }
