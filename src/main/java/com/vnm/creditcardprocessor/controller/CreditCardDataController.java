@@ -3,6 +3,7 @@
  */
 package com.vnm.creditcardprocessor.controller;
 
+import com.microsoft.applicationinsights.telemetry.SeverityLevel;
 import com.vnm.creditcardprocessor.constants.CreditCardDataConstants;
 import com.vnm.creditcardprocessor.model.*;
 import com.vnm.creditcardprocessor.service.CCProcessorService;
@@ -14,6 +15,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestHeader;
+import com.microsoft.applicationinsights.TelemetryClient;
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
+
 /**
  * @author  varmathu0
  * @project Credit-Card-Processor
@@ -23,6 +29,11 @@ public class CreditCardDataController {
 
     @Autowired
     private CCProcessorService processorService;
+    @Autowired
+    private HttpServletRequest request;
+
+    @Autowired
+    TelemetryClient telemetryClient;
 
     @RequestMapping(path = "/add-card", method = RequestMethod.POST)
     @ApiOperation("Add a new credit card")
@@ -92,7 +103,13 @@ public class CreditCardDataController {
 
     @RequestMapping(path = "/list-cards", method = RequestMethod.GET , produces = "application/json")
     @ApiOperation("List all cards from the system")
-    public CreditCardListResponse getCards() {
+
+    public CreditCardListResponse getCards(@RequestHeader Map<String, String> headers) {
+        System.out.println(headers);
+        String ipAddress = request.getRemoteAddr();
+        System.out.println(ipAddress);
+        telemetryClient.trackEvent("Tracking Request for List Cards");
+        telemetryClient.trackTrace("GET /LIST API HIT", SeverityLevel.Information);
         return processorService.getAllCards();
 
     }
