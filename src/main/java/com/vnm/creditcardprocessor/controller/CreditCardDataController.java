@@ -103,7 +103,6 @@ public class CreditCardDataController {
 
     @RequestMapping(path = "/list-cards", method = RequestMethod.GET , produces = "application/json")
     @ApiOperation("List all cards from the system")
-
     public CreditCardListResponse getCards(@RequestHeader Map<String, String> headers) {
         System.out.println(headers);
         String ipAddress = request.getRemoteAddr();
