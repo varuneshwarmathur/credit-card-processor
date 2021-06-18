@@ -18,12 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestHeader;
 import com.microsoft.applicationinsights.TelemetryClient;
 import javax.servlet.http.HttpServletRequest;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.Map;
 
 /**
  * @author  varmathu0
  * @project Credit-Card-Processor
  */
+@CrossOrigin
 @RestController
 public class CreditCardDataController {
 
