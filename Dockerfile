@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-alpine
+FROM public.ecr.aws/lts/ubuntu:latest
 COPY ./target/Credit-Card-Processor-0.0.1-SNAPSHOT.jar /usr/src/tmp/
 WORKDIR /usr/src/tmp
 EXPOSE 8080
