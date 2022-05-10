@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   description: This service assists in managing credit card transactional data
   version: 1.0.0
-  title: Credit Card Processor Application
+  title: Credit Card Processor Application v2.0
   contact:
     name: Varuneshwar Mathur
     email: mathur_varunesh@yahoo.com
