@@ -4,7 +4,7 @@ info:
   version: 1.0.0
   title: Credit Card Processor Application
   contact:
-    name: Varuneshwar
+    name: Varuneshwar Mathur
     email: mathur_varunesh@yahoo.com
 host: 'localhost:8080'
 basePath: /ccp/v1
