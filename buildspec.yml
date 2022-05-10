@@ -47,5 +47,6 @@ phases:
 artifacts:
   files:
     - imagedefinitions.json
+    - appspec.yml
     # 'Dockerfile'
     # 'target/Credit-Card-Processor-0.0.1-SNAPSHOT.jar'
