@@ -4,7 +4,7 @@ version: 0.2
 env:
   variables:
     AWS_REGION: us-east-1
-    AWS_ACCOUNT_ID: 273070459766
+    AWS_ACCOUNT_ID: 088611918709
     AWS_SERVICE_NAME: .dkr.ecr.
     AWS_DOMAIN_NAME: .amazonaws.com
     IMAGE_NAME: credit-card-processor-service
