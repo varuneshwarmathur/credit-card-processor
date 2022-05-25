@@ -65,7 +65,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:088611918709:task-definition/credit-card-service:3",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:088611918709:task-definition/credit-card-service:7",
   "family": "credit-card-service",
   "requiresAttributes": [
     {
