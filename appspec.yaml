@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-east-1:088611918709:task-definition/credit-card-service:3"
+        TaskDefinition: "arn:aws:ecs:us-east-1:088611918709:task-definition/credit-card-service:7"
         LoadBalancerInfo:
           ContainerName: "credit-card-service"
           ContainerPort: 8080
