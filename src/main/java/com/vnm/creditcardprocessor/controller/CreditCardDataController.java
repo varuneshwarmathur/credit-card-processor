@@ -37,7 +37,7 @@ public class CreditCardDataController {
     @Autowired
     TelemetryClient telemetryClient;
 
-    @RequestMapping(path = "/add-credit-card-salgrp4", method = RequestMethod.POST)
+    @RequestMapping(path = "/add-credit-card-new", method = RequestMethod.POST)
     @ApiOperation("Add a new credit card")
     public CCGenericResponse addCard(@RequestBody CCTransactionRequestModel request) {
 
