@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <name>Credit-Card-Processor</name>
-    <description>Credit Card Data Processing Application</description>
+    <description>Credit Card Data Processing Application-v1.0</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
